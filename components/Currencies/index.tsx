@@ -76,7 +76,7 @@ export default function Currencies() {
 
     return (
         <Container className="mt-8">
-            <TextField label='Monto' type='number' defaultValue={1} onChange={(e) => setAmount(Number(e.target.value))}></TextField>
+            <TextField label='Monto' type='number' inputProps={{pattern:"[0-9]*"}} onChange={(e) => setAmount(Number(e.target.value))}></TextField>
             <Grid container className='mt-3'>
                 <Grid item xs={3}></Grid>
                 <Grid item xs={2}>
@@ -85,7 +85,7 @@ export default function Currencies() {
                     </Typography>
                 </Grid>
                 <Grid item xs={2}>
-                    <IconButton aria-label="swap" size="small" onClick={swapCurrencies}>
+                    <IconButton aria-label="swap" color="primary" size="small" onClick={swapCurrencies}>
                         <SwapHorizIcon />
                     </IconButton>
                 </Grid>
