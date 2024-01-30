@@ -21,7 +21,7 @@ export default function CustomCard() {
                 CONVERSOR DE PESOS A SATOSHIS
             </Typography> */}
             <Currencies />
-            <Typography gutterBottom variant="body2"  className="mt-3" component="div">
+            <Typography gutterBottom variant="subtitle2"  className="mt-5" component="div">
                 Ta todo bien loko, no pasa nada!
             </Typography>
             </CardContent>
