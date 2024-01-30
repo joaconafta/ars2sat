@@ -15,7 +15,17 @@ export const metadata: Metadata = {
   title: "ars2sat",
   description: "Conversor de ARS a Satoshis",
   icons: {
-    icon: '/satelite-white.png',
+    icon: '/satelite-blue.png',
+  },
+  openGraph: {
+    title: 'ars2sat',
+    description: 'Conversor de ARS a Satoshis',
+    type: "website",
+    url: 'https://ars2sat.vercel.app',
+    siteName: "ars2sat",
+    images: [{
+      url: '/satelite-blue.png',
+    }],
   },
 };
 
