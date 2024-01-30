@@ -24,9 +24,10 @@ export const metadata: Metadata = {
     url: 'https://ars2sat.vercel.app',
     siteName: "ars2sat",
     images: [{
-      url: '/satelite-blue.png',
+      url: 'https://ars2sat.vercel.app/satelite-blue.png',
     }],
   },
+  metadataBase: new URL("https://ars2sat.vercel.app")
 };
 
 export default function RootLayout({
