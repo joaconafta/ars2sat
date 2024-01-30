@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 export default function Currencies() {
+    const [error, setError] = useState<string>('')
     const [amount, setAmount] = useState<number>(1)
     const [from, setFrom] = useState<string>('ARS')
     const [to, setTo] = useState<string>('SAT')
@@ -33,7 +34,7 @@ export default function Currencies() {
             .then(data => {
                 return data.blue.value_sell
             })
-            .catch(error => console.error('Error al obtener cotización USD', error));
+            .catch(error => setError('Error al obtener cotización USD'));
     }
 
     const getSATValue = async () => {
@@ -42,7 +43,8 @@ export default function Currencies() {
             .then(data => {
                 return data.data.amount / 100000000            
             })
-            .catch(error => console.error('Error al obtener cotización BTC', error));
+            .catch(error => setError('Error al obtener cotización BTC'));
+
     }
 
     const calcPrice = async () => {
@@ -99,9 +101,14 @@ export default function Currencies() {
             {/* <Typography gutterBottom variant='caption' component="div">
                 1 SAT = X USD = 2 ARS
             </Typography> */}
-            {!loading &&
+            {!loading && !error &&
                 <Typography className='mt-5' gutterBottom variant='body1' component="span">
                     {amount.toFixed(2)} {from} = {response.toFixed(2)} {to}
+                </Typography>
+            }
+            {!loading && error &&
+                <Typography className='mt-5' gutterBottom variant='body1' style={{color:'red'}} component="span">
+                    {error}
                 </Typography>
             }
             {loading && <LinearProgress className='mt-5'/>}
