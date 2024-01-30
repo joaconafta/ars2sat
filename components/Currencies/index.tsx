@@ -76,7 +76,7 @@ export default function Currencies() {
 
     return (
         <Container className="mt-5">
-            <TextField label='Monto' type='number' inputProps={{pattern:"[0-9]*"}} onChange={(e) => setAmount(Number(e.target.value))}></TextField>
+            <TextField label='Monto' type='number' inputProps={{pattern:"^[0-9]+$", min:'0'}} onChange={(e) => (Number(e.target.value) < 0 ? (e.target.value = Math.abs(Number(e.target.value)).toString()):e.target.value) && setAmount(Number(e.target.value))}></TextField>
             <Grid container className='mt-3'>
                 <Grid item xs={3}></Grid>
                 <Grid item xs={2}>
