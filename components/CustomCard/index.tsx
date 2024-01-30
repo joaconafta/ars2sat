@@ -3,18 +3,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Currencies from '../Currencies';
-import { Container } from '@mui/material';
+import { CardMedia, Container } from '@mui/material';
+import Image from 'next/image'
 
 export default function CustomCard() {
   return (
-    <Container maxWidth="sm" >
+    <Container maxWidth="sm">
         <Card style={{ backgroundColor: '#c3c3c3'}}>
-            {/* <CardMedia
-            component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
-            /> */}
             <CardContent className='text-center'>
             <Typography gutterBottom variant="h4" component="div">
                 ars2sat
