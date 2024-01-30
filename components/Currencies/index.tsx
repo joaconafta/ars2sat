@@ -9,7 +9,7 @@ export default function Currencies() {
     const [amount, setAmount] = useState<number>(1)
     const [from, setFrom] = useState<string>('ARS')
     const [to, setTo] = useState<string>('SAT')
-    const [response, setResponse] = useState<string>('0')
+    const [response, setResponse] = useState<number>(0)
     const [loading, setLoading] = useState<boolean>(false)
     const [idTimeOut, setIdTimoout] = useState<NodeJS.Timeout>()
 
@@ -49,7 +49,7 @@ export default function Currencies() {
         console.log(amount,from,to)
         if (!amount) {
             setAmount(0)
-            setResponse('0')
+            setResponse(0)
         }
         const usdValue = await getUSDBlueValue()
         const satValue = await getSATValue()
@@ -59,7 +59,7 @@ export default function Currencies() {
         else if (from === 'SAT' && to === 'ARS')
             res = amount * usdValue * Number(satValue);
         else console.log('invalid currencies')
-        setResponse(res.toFixed(2))
+        setResponse(res)
         setLoading(false)
     }
 
@@ -101,7 +101,7 @@ export default function Currencies() {
             </Typography> */}
             {!loading &&
                 <Typography className='mt-5' gutterBottom variant='body1' component="span">
-                    {amount} {from} = {response} {to}
+                    {amount.toFixed(2)} {from} = {response.toFixed(2)} {to}
                 </Typography>
             }
             {loading && <LinearProgress className='mt-5'/>}

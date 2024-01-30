@@ -14,6 +14,9 @@ const orbitron: NextFontWithVariable = Roboto_Mono({
 export const metadata: Metadata = {
   title: "ars2sat",
   description: "Conversor de ARS a Satoshis",
+  icons: {
+    icon: '/satelite-white.png',
+  },
 };
 
 export default function RootLayout({

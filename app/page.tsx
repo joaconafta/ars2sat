@@ -16,10 +16,10 @@ export default function Home() {
       <CustomCard />
       <Image src="/satelite.png"
        className="mt-10"
-       style={{ filter: "invert(87%) sepia(2%) saturate(4%) hue-rotate(7deg) brightness(90%) contrast(91%);" }}
+       style={{ filter: "invert(87%) sepia(2%) saturate(4%) hue-rotate(7deg) brightness(90%) contrast(91%)" }}
         width={300}
         height={300}
-        alt="Picture of the author"></Image>
+        alt="ARSAT"></Image>
     </main>
     </ThemeProvider>
   );
