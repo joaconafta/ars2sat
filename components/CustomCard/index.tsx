@@ -15,12 +15,15 @@ export default function CustomCard() {
                 ars2sat
             </Typography>
             <Typography gutterBottom variant="subtitle2"  component="div">
-                Conversor de pesos a satoshis
+                Conversor de pesos falsificados a satoshis
             </Typography>
             {/* <Typography gutterBottom variant="subtitle2"  component="div">
                 CONVERSOR DE PESOS A SATOSHIS
             </Typography> */}
             <Currencies />
+            <Typography gutterBottom variant="body2"  className="mt-3" component="div">
+                Ta todo bien loko, no pasa nada!
+            </Typography>
             </CardContent>
         {/* <CardActions>
             

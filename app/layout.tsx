@@ -13,13 +13,13 @@ const orbitron: NextFontWithVariable = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "ars2sat",
-  description: "Conversor de ARS a Satoshis",
+  description: "Conversor de pesos falsificados a satoshis",
   icons: {
     icon: '/satelite-blue.png',
   },
   openGraph: {
     title: 'ars2sat',
-    description: 'Conversor de ARS a Satoshis',
+    description: 'Conversor de pesos falsificados a satoshis',
     type: "website",
     url: 'https://ars2sat.vercel.app',
     siteName: "ars2sat",

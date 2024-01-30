@@ -75,7 +75,7 @@ export default function Currencies() {
     const debounceApiCall = debounce(calcPrice, 300)
 
     return (
-        <Container className="mt-8">
+        <Container className="mt-5">
             <TextField label='Monto' type='number' inputProps={{pattern:"[0-9]*"}} onChange={(e) => setAmount(Number(e.target.value))}></TextField>
             <Grid container className='mt-3'>
                 <Grid item xs={3}></Grid>
