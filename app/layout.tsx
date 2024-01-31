@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bitter, Cute_Font, Exo_2, Orbitron, Roboto_Mono } from 'next/font/google'
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${orbitron.variable}`}>
       <body className="orbitron">{children}</body>
+      <GoogleAnalytics gaId="G-L31DKJ1WDV" />
     </html>
   );
 }
