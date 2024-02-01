@@ -14,6 +14,9 @@ export default function Home() {
     <ThemeProvider theme={theme}>
     <main className="flex flex-col items-center justify-between pt-10 pl-1 pr-1">
       <CustomCard />
+      <Typography gutterBottom variant="body1" component="div">
+          Made by @0xnafta & @lberna98
+      </Typography>
       <Image src="/satelite.png"
        className="mt-10"
        style={{ filter: "invert(87%) sepia(2%) saturate(4%) hue-rotate(7deg) brightness(90%) contrast(91%)" }}
