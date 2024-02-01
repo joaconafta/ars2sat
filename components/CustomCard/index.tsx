@@ -3,8 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Currencies from '../Currencies';
-import { CardMedia, Container } from '@mui/material';
-import Image from 'next/image'
+import { Container, Link } from '@mui/material';
 
 export default function CustomCard() {
   return (
@@ -25,9 +24,11 @@ export default function CustomCard() {
                 Ta todo bien loko, no pasa nada!
             </Typography>
             </CardContent>
-        {/* <CardActions>
-            
-        </CardActions> */}
+        <CardContent className="text-center" style={{ padding: '0px', margin: '0px'}}>
+            <Typography gutterBottom variant="subtitle2" style={{ color: "grey"}} component="div">
+            Made by <Link href='https://x.com/0xnafta' target="_blank">@0xnafta</Link> & <Link target="_blank" href='https://x.com/lberna98'>@lberna98</Link>
+        </Typography>
+        </CardContent>
         </Card> 
     </Container>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bitter, Cute_Font, Exo_2, Orbitron, Roboto_Mono } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
